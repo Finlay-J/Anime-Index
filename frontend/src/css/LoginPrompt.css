@@ -1,0 +1,85 @@
+.login-prompt {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d3748 100%);
+    border: 2px solid #00FF88;
+    border-radius: 12px;
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 500px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 255, 136, 0.1);
+}
+
+.login-prompt-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.login-icon {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.login-prompt p {
+    color: rgba(255, 255, 255, 0.87);
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+.login-prompt-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.login-btn,
+.register-btn {
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    min-width: 100px;
+    text-align: center;
+}
+
+.login-btn {
+    background: linear-gradient(135deg, #00FF88 0%, #1DB954 100%);
+    color: #121212;
+}
+
+.login-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 255, 136, 0.3);
+    color: #121212;
+}
+
+.register-btn {
+    background: transparent;
+    color: #00FF88;
+    border: 2px solid #00FF88;
+}
+
+.register-btn:hover {
+    background: rgba(0, 255, 136, 0.1);
+    color: #00FF88;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 480px) {
+    .login-prompt {
+        margin: 1rem;
+        padding: 1.5rem;
+    }
+    
+    .login-prompt-actions {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+    
+    .login-btn,
+    .register-btn {
+        width: 100%;
+    }
+}

@@ -1,0 +1,58 @@
+.dev-helper {
+    background: linear-gradient(135deg, #2d3748 0%, #4a5568 100%);
+    border: 2px solid #00FF88;
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 1rem 0;
+    color: rgba(255, 255, 255, 0.87);
+    font-size: 0.9rem;
+}
+
+.dev-helper h4 {
+    margin: 0 0 0.5rem 0;
+    color: #00FF88;
+    font-size: 1rem;
+}
+
+.dev-helper p {
+    margin: 0.5rem 0;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.users-list {
+    margin: 1rem 0;
+}
+
+.user-item {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 0.8rem;
+    margin: 0.5rem 0;
+    border-radius: 6px;
+    border-left: 3px solid #00FF88;
+}
+
+.user-item strong {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.user-item small {
+    color: rgba(255, 255, 255, 0.6);
+    font-style: italic;
+}
+
+.warning {
+    color: #ffd700 !important;
+    font-weight: 500;
+    margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+    .dev-helper {
+        font-size: 0.8rem;
+        padding: 0.8rem;
+    }
+    
+    .user-item {
+        padding: 0.6rem;
+    }
+}

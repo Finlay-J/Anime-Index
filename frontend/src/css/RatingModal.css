@@ -1,0 +1,237 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: 1rem;
+}
+
+.rating-modal {
+    background: #1a1a1a;
+    border-radius: 12px;
+    padding: 2rem;
+    max-width: 500px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    border: 2px solid #00FF88;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 1rem;
+}
+
+.modal-header h3 {
+    color: rgba(255, 255, 255, 0.87);
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 0;
+    transition: color 0.2s ease;
+}
+
+.close-btn:hover {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.anime-info-header {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+}
+
+.anime-poster-small {
+    width: 80px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.anime-details h4 {
+    color: rgba(255, 255, 255, 0.87);
+    margin: 0 0 0.5rem 0;
+    font-size: 1.2rem;
+}
+
+.anime-details p {
+    color: rgba(255, 255, 255, 0.6);
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.rating-section {
+    margin-bottom: 2rem;
+}
+
+.rating-section label {
+    display: block;
+    color: rgba(255, 255, 255, 0.87);
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.stars-container {
+    display: flex;
+    gap: 0.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.star {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 0.25rem;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+    opacity: 0.3;
+}
+
+.star:hover {
+    transform: scale(1.1);
+}
+
+.star.active {
+    opacity: 1;
+    filter: drop-shadow(0 0 8px #ffd700);
+}
+
+.rating-text {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
+.comment-section {
+    margin-bottom: 2rem;
+}
+
+.comment-section label {
+    display: block;
+    color: rgba(255, 255, 255, 0.87);
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.comment-section textarea {
+    width: 100%;
+    padding: 0.75rem;
+    background: #2b2b2b;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    color: rgba(255, 255, 255, 0.87);
+    font-family: inherit;
+    font-size: 0.9rem;
+    resize: vertical;
+    min-height: 100px;
+    box-sizing: border-box;
+}
+
+.comment-section textarea:focus {
+    outline: none;
+    border-color: #00FF88;
+    box-shadow: 0 0 0 3px rgba(0, 255, 136, 0.1);
+}
+
+.comment-section textarea::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.comment-section small {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.8rem;
+    margin-top: 0.25rem;
+    display: block;
+}
+
+.modal-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+}
+
+.cancel-btn,
+.submit-btn {
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: none;
+    font-size: 0.9rem;
+}
+
+.cancel-btn {
+    background: transparent;
+    color: rgba(255, 255, 255, 0.7);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.cancel-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.submit-btn {
+    background: linear-gradient(135deg, #00FF88 0%, #1DB954 100%);
+    color: #121212;
+}
+
+.submit-btn:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 255, 136, 0.3);
+}
+
+.submit-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    .rating-modal {
+        padding: 1.5rem;
+        margin: 1rem;
+    }
+    
+    .anime-info-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .anime-poster-small {
+        align-self: center;
+    }
+    
+    .modal-actions {
+        flex-direction: column;
+    }
+    
+    .cancel-btn,
+    .submit-btn {
+        width: 100%;
+    }
+}
