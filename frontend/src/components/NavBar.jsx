@@ -15,6 +15,7 @@ function NavBar(){
         </div>
         <div className="navbar-links">
             <Link to="/" className="nav-link">Home</Link>
+            <Link to="/rankings" className="nav-link">Rankings</Link>
             {isAuthenticated && <Link to="/favorites" className="nav-link">Favorites</Link>}
             {isAuthenticated && <Link to="/profile" className="nav-link">Profile</Link>}
             

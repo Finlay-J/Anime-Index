@@ -1,0 +1,4 @@
+Week 1: Set up FastAPI + PostgreSQL for user accounts
+Week 2: Move favorites from localStorage to database
+Week 3: Implement real ratings/reviews system
+Week 4: Add global rankings and advanced features
